@@ -1,0 +1,155 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link href="css/dinocss.css" rel="stylesheet" type="text/css" />
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/superfish/superfish.js"></script>
+<script type="text/javascript" src="js/jquery.cycle.js"></script>
+<script type="text/javascript" src="js/date.js"></script>
+<script type="text/javascript" src="js/randomFacts.js"></script>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Dinosaurus</title>
+<script type="text/javascript">
+$(document).ready(function( ) {
+$('.dropdown').superfish({
+ delay: 400
+ });
+ $('.nav li:has(ul)').find('a:first').addClass('sub');
+ $('.nav ul li:has(ul)').find('a:first').removeClass('sub').
+addClass('subsub');
+
+
+/*photos*/
+
+		$('#photos').cycle({
+			fx: 'scrollRight',
+			timeout: 7000,
+			speed: 500,
+			delay: 4000,
+			pager:'#pager',
+			next: '#next',
+			prev: '#prev'
+							});
+		$('#playControl').toggle(
+			function() {
+				$('#photos').cycle('pause');
+				$(this).text('Play');
+			},
+			function() {
+				$('#photos').cycle('resume');
+				$(this).text('Pause');
+			});
+
+//beginning of date
+
+});
+</script>
+</head>
+
+<body>
+
+<div id="container">
+	<div id="header">
+    <a href=""><img id="logo" src="images/logo.png" /></a>
+   
+ 
+    </div><!--end of header div-->
+    <div id="photos">
+<div>
+<img src="images/slide1.jpg" alt="vegetation" width="1025" height="386">
+<p>An elephant!</p>
+</div>
+</dive
+><div>
+<img src="images/slide2.jpg" alt="Tree" width="1025" height="386">
+<p>An elephant!</p>
+</div>
+<div>
+<img src="images/slide3.jpg" alt="tallGrass" width="1025" height="386">
+<p>An elephant!</p>
+
+</div>
+</div>
+             <div id="linkList">
+    <ul class="dropdown">
+        
+        <li><a href="dinoprehistory.html">Prehistory</a>
+            <ul>
+            	<li><a href="dinoprehistory.html">Permean Extinction</a></li>
+        		<li><a href="dinoprehistory.html">Triassic</a></li>
+        		<li><a href="dinoprehistory.html">Jurassic</a></li>
+        		<li><a href="dinoprehistory.html">Cretaceous</a></li>
+        		<li><a href="dinoprehistory.html">Dinosaur Extinction</a></li>
+            </ul>
+       </li>
+       <li><a href="#">Dinosaurs</a>
+       		<ul>
+            	<li><a href="#">Carnivores</a></li>
+        		<li><a href="#">Herbivores</a></li>
+        		<li><a href="#">Omnivores</a></li>
+        		<li><a href="#">Winged</a></li>
+            </ul>
+       </li>
+        <li><a href="#">Fossils</a></li>
+    	<li><a href="#">Faq</a></li>
+    	<li><a href="#">Club</a></li>
+	    <li> </li>
+        </ul>
+       
+    </div><!--end of linkList div--> 
+    	<div id="search">
+        <form method="drop" action="search">
+	<input type="text" name="xyz" size="20" />
+	<input type="submit" value="search" />
+	<input type="hidden" name="zoom_cat[]" value="-1">
+	</form>
+        		</div><!-- end of search div -->
+    <div id="sideBar">
+    	<div id="linkList2">
+	<ul>
+		<li><a href=""> Home </a></li>
+    	<li><a href=""> Dinosaurs </a></li>
+    	<li><a href=""> Fossils </a></li>
+    	<li><a href=""> Faq </a></li>
+    	<li><a href=""> Club </a></li>
+	</ul>
+		</div><!-- end of linkList2 -->
+    </div><!--end of sideBar div -->
+  
+    <div id="body">
+     <div id="controls">
+          <span id="prev" class="control"> <<</span>
+          <span id="pager"></span>
+          <span id="next" class="control"> >> </span>
+          <span id="playControl" class="control">Pause</span>
+      </div>
+<img id="home" src="images/home.png" />
+ 
+<p>Hello Everybody!</p>
+<p>This is the first update for the dinosaurus. Please take a look around and remember to add yourself to the email list!
+</p>
+<p>Random Fact: <script type="text/javascript">
+	randomFact();
+</script>
+</p>
+	</div><!-- end of body div-->
+   	<div id="footer">
+    	<div id="linkList3">
+	<ul>
+        <li><a href=""> Home </a></li>
+        <li><a href=""> Faq </a></li>
+        <li><a href=""> Fossils </a></li>
+        <li><a href=""> Dinosaurs </a></li>
+        <li><a href=""> Prehistory </a></li>
+        <li>    <script type="text/javascript">
+	var today = new Date();
+	var message = dateString(today, 'Today is %W, %M %D, %Y');
+	document.write(message);
+</script></li>
+          
+	</ul>
+	</div><!-- end of linkList3 -->
+    </div><!-- end of footer div -->
+</div><!--end of container div --> 
+</body>
+</html>

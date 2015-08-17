@@ -1,0 +1,199 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+<title>DINO FORM</title>
+<style type="text/css">
+
+body {
+	background-color:#67753d;	
+}
+
+</style>
+<link href="css/dinoform.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="validation/jquery.validate.js"></script>
+<script type="text/javascript">
+$(document).ready(function() {
+ $('#name').focus();	
+ $('#signup').validate({
+	 rules: {
+		 email: {
+			required: true,
+			email: true 
+		 },
+		 password: {
+			required: true,
+			rangelength:[8,16] 
+		 },
+		 confirm_password: {
+			equalTo:'#password' 
+		 }
+	 }, //end rules
+	 messages: {
+		 email: {
+			required: "Please supply your e-mail address.",
+			email: "This is not a valid e-mail address." 
+		 },
+		 password: {
+			required: 'Please type a password',
+			rangelength: 'Password must be between 8 and 16 characters long.' 
+		 },
+		 confirm_password: {
+			equalTo: 'The two passwords do not match.' 
+		 }
+	 },//end messages
+	errorPlacement: function(error, element) {
+		  if ( element.is(":radio") || element.is(":checkbox")) {
+			   error.appendTo( element.parent());
+		   } else {
+			   error.insertAfter(element);
+		   }
+	   } // end errorPlacement
+ }); // end validate()
+}); // end ready()
+</script>
+</head>
+<body id="twoCol">
+<div id="container">
+ 
+  
+  <div id="contentWrap">
+  <div id="main">
+  <h1>Join the Dinosaur Club! </h1>
+  <form action="process.html" method="post" name="signup" id="signup">
+    <div>
+      <label for="name" class="label">Name </label>
+      <input name="name" type="text" id="name" class="required" title="Please type your name.">
+    </div>
+    <div>
+      <label for="email" class="label">E-mail Address</label>
+      <input name="email" type="text" id="email">
+    </div>
+    <div>
+      <label for="password" class="label">Password</label>
+      <input name="password" type="password" id="password">
+    </div>
+    <div>
+      <label for="confirm_password" class="label">Confirm Password</label>
+      <input name="confirm_password" type="password" id="confirm_password">
+    </div>
+<div><span class="label">Eating Habit</span>
+      <input name="habit" type="checkbox" id="Carnivore" value="Carnivore" class="required" title="Please check what kind of eater you are.">
+      <label for="Carnivore">Carnivore</label>
+      <input name="habit" type="checkbox" id="Herbivore" value="Herbivore">
+      <label for="Herbivore">Herbivore</label>
+      <input name="habit" type="checkbox" id="Omnivore" value="Omnivore">
+      <label for="Omnivore">Omnivore</label>
+    </div>
+    <div>
+      <label for="dob" class="label">Date of birth</label>
+      <select name="month" id="month" class="required" title="Please choose a month.">
+      <option value="">Month</option>
+      <option value="January">January</option>
+      <option value="February">February</option>
+      <option value="March">March</option>
+      <option value="April">April</option>
+      <option value="May">May</option>
+      <option value="June">June</option>
+      <option value="July">July</option>
+      <option value="August">August</option>
+      <option value="September">September</option>
+      <option value="October">October</option>
+      <option value="November">November</option>
+      <option value="December">December</option>
+      </select>
+      <select name="day" id="day" class="required" title="Please choose a day.">
+      <option value="">DAY</option>
+      <option value="01">01</option>
+      <option value="02">02</option>
+      <option value="03">03</option>
+      <option value="04">04</option>
+      <option value="05">05</option>
+      <option value="06">06</option>
+      <option value="07">07</option>
+      <option value="08">08</option>
+      <option value="09">09</option>
+      <option value="10">10</option>
+      <option value="11">11</option>
+      <option value="12">12</option>
+      <option value="13">13</option>
+      <option value="14">14</option>
+      <option value="15">15</option>
+      <option value="16">16</option>
+      <option value="17">17</option>
+      <option value="18">18</option>
+      <option value="19">19</option>
+      <option value="20">20</option>
+      <option value="21">21</option>
+      <option value="22">22</option>
+      <option value="23">23</option>
+      <option value="24">24</option>
+      <option value="25">25</option>
+      <option value="26">26</option>
+      <option value="27">27</option>
+      <option value="28">28</option>
+      <option value="29">29</option>
+      <option value="30">30</option>
+      <option value="31">31</option>
+      </select>
+      <select name="year" id="year" class="required" title="Please choose a year.">
+      <option value="">YEAR</option>
+      <option value="2011">2011</option>
+      <option value="2010">2010</option>
+      <option value="2009">2009</option>
+      <option value="2008">2008</option>
+      <option value="2007">2007</option>
+      <option value="2006">2006</option>
+      <option value="2005">2005</option>
+      <option value="2004">2004</option>
+      <option value="2003">2003</option>
+      <option value="2002">2002</option>
+      <option value="2001">2001</option>
+      <option value="2000">2000</option>
+      <option value="1999">1999</option>
+      <option value="1998">1998</option>
+      <option value="1997">1997</option>
+      <option value="1996">1996</option>
+      <option value="1995">1995</option>
+      <option value="1994">1994</option>
+      <option value="1993">1993</option>
+      <option value="1992">1992</option>
+      <option value="1991">1991</option>
+      <option value="1990">1990</option>
+      <option value="1989">1989</option>
+      <option value="1988">1988</option>
+      <option value="1987">1987</option>
+      <option value="1986">1986</option>
+      <option value="1985">1985</option>
+      <option value="1984">1984</option>
+      <option value="1983">1983</option>
+      <option value="1982">1982</option>
+      <option value="1981">1981</option>
+      </select>
+    </div>
+    <div>
+      <label for="comments" class="label">Comments</label>
+      <textarea name="comments" cols="15" rows="5" id="comments"></textarea>
+    </div>
+    <div class="labelBlock">Would you like to receive annoying e-mail from us?</div>
+    <div class="indent">
+      <input  type="radio" name="spam" id="yes" value="yes" class="required" title="Please select an option">
+      <label for="yes">Yes</label>
+      <input type="radio" name="spam" id="definitely" value="definitely">
+      <label for="definitely">Definitely</label>
+      <input type="radio" name="spam" id="choice" value="choice">
+      <label for="choice">Do I have a choice?</label>
+     </div>
+<div>
+            <input type="submit" name="submit" id="submit" value="Submit">
+    </div>
+  </form>
+</div>
+
+  </div>
+
+</div>
+</body>
+</html>

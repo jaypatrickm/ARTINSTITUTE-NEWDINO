@@ -1,0 +1,188 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link href="css/dinocarnivorecss.css" rel="stylesheet" type="text/css" />
+<link href="greybox/greybox2.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/superfish/superfish.js"></script>
+<script type="text/javascript" src="js/jquery.cycle.js"></script>
+<script type="text/javascript" src="js/ui/ui.core.js"></script>
+<script type="text/javascript" src="js/ui/ui.tabs.js"></script>
+<script type="text/javascript" src="js/date.js"></script>
+<script type="text/javascript" src="js/randomFacts.js"></script>
+<script type="text/javascript" src="greybox/jquery.greybox2.js"></script>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Carnivores</title>
+<style type="text/css">
+.dino {
+	list-style-type:none;
+	display:inline;	
+}
+</style>
+<script type="text/javascript">
+$(document).ready(function( ) {
+	$('.dropdown').superfish({ delay: 400 });
+ 	$('.nav li:has(ul)').find('a:first').addClass('sub');
+ 	$('.nav ul li:has(ul)').find('a:first').removeClass('sub').addClass('subsub');
+
+
+/*
+  var target = '.bigLink';
+  var hoverClass = 'hoverBigLink';
+
+  $(target).each(function() {
+		$(this).hover(
+      function() {
+         $(this).addClass(hoverClass);
+         status=$(this).find('a').attr('href');
+      },
+      function () {
+         $(this).removeClass(hoverClass);
+      });
+
+    $(this).click(function() {
+       location = $(this).find('a').attr('href');
+    });
+
+    $(this).css('cursor','pointer');
+
+  });*/
+
+
+/*  $(target + ' a')
+    .focus(function() {
+      $(this).parents(target).addClass(hoverClass);
+    })
+    .blur(function() {
+	 $(this).parents(target).removeClass(hoverClass);
+   });*/
+
+
+//beginning of form box
+var gbOptions = {
+		gbWidth: 700,
+		gbHeight: 550	
+	};
+	$('.club a').greybox(gbOptions);
+	var gbOptions2 = {
+		gbWidth: 650,
+		gbHeight: 600
+	};
+	$('.dino a').greybox(gbOptions2);
+
+	
+$('#gallery img').each(function() {
+	var imgFile = $(this).attr('src');
+	var preloadImage = new Image();
+	var imgExt = /(\.\w{3,4}$)/;
+	preloadImage.src = imgFile.replace(imgExt, '_h$1');
+	$(this).hover(
+		function() {
+		$(this).attr('src', preloadImage.src);
+		
+		},
+		function() {
+		$(this).attr('src', imgFile);	
+		}
+				  ); //end hover
+});// end each
+}); // end ready
+</script>
+</head>
+
+<body id="twocol">
+<div id="container">
+	<div id="header">
+    <a href="index.html"><img id="logo" src="images/logo.png" /></a>
+    
+ 
+    </div><!--end of header div-->
+    
+             <div id="linkList">
+    <ul class="dropdown">
+        
+        <li><a href="prehistory.html">Prehistory</a>
+            <ul>
+            	<li><a href="prehistory.html">Permian Extinction</a></li>
+        		<li><a href="prehistory.html">Triassic</a></li>
+        		<li><a href="prehistory.html">Jurassic</a></li>
+        		<li><a href="prehistory.html">Cretaceous</a></li>
+        		<li><a href="prehistory.html">Dinosaur Extinction</a></li>
+            </ul>
+       </li>
+       <li><a href="dinosaurs.html">Dinosaurs</a>
+       		<ul>
+            	<li><a href="carnivores.html">Carnivores</a></li>
+        		<li><a href="#">Herbivores</a></li>
+        		<li><a href="#">Omnivores</a></li>
+        		<li><a href="#">Winged</a></li>
+            </ul>
+       </li>
+        <li><a href="fossils.html">Fossils</a></li>
+    	<li><a href="faq.html">Faq</a></li>
+    	<li class="club"><a href="dinoform.html">Club</a></li>
+	    <li> </li>
+        </ul>
+       
+    </div><!--end of linkList div--> 
+    	<div id="search">
+  <!--      <form method="drop" action="search">
+	<input type="text" name="xyz" size="20" />
+	<input type="submit" value="search" />
+	<input type="hidden" name="zoom_cat[]" value="-1">
+	</form>-->
+        		</div><!-- end of search div -->
+    <!--<div id="sideBar">
+    	<div id="linkList2">
+	<ul>
+		<li><a href="index.html"> Home </a></li>
+    	<li><a href="prehistory.html"> Prehistory </a></li>
+    	<li><a href="dinosaurs.html"> Dinosaur </a></li>
+        <li><a href="fossils.html"> Fossils </a></li>
+    	<li><a href="faq.html"> Faq </a></li>
+    	<li class="club"><a href="dinoform.html">Club</a></li>
+	</ul>
+		</div> end of linkList2
+    </div>end of sideBar div -->
+  
+
+
+   
+ 
+
+<div id="mainContent">
+	 <div id="gallery">
+      
+      <li class="dino"><a  href="allosaurus.html"><img src="images/thumb1.jpg" width="228" height="142" alt="allosaurus"></a></li>
+      <li class="dino"><a href="megalosaurus.html"><img src="images/thumb2.jpg" width="228" height="142" alt="megalosaurus"> </a></li>
+      <li class="dino"><a href="trex.html"><img src="images/thumb3.jpg" width="228" height="142" alt="tyrannasaurus rex"> </a></li>
+      <li class="dino"><a href="utahraptor.html"><img src="images/thumb4.jpg" width="228" height="142" alt="Orange"> </a></li>
+      <li class="dino"><a href="velociraptor.html"><img src="images/thumb5.jpg" width="228" height="142" alt="Purple"> </a></li>
+  </div>
+</div>
+
+
+   	<div id="footer">
+    	<div id="linkList3">
+	<ul>
+        <li><a href="index.html"> Home </a></li>
+        <li><a href="prehistory.html"> Prehistory </a></li>
+        <li><a href="dinosaurs.html"> Dinosaurs </a></li>
+        <li><a href="fossils.html"> Fossils </a></li>
+        <li><a href="faq.html"> Faq </a></li>
+       <li>    <script type="text/javascript">
+	var today = new Date();
+	var message = dateString(today, 'Today is %W, %M %D, %Y');
+	document.write(message);
+</script></li>
+        
+        
+        
+        
+        
+	</ul>
+	</div><!-- end of linkList3 -->
+    </div><!-- end of footer div -->
+</div><!--end of container div -->
+</body>
+</html>

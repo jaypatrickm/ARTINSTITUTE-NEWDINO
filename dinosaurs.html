@@ -1,0 +1,213 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link href="css/dinosaurscss.css" rel="stylesheet" type="text/css" />
+<link href="greybox/greybox2.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/superfish/superfish.js"></script>
+<script type="text/javascript" src="js/jquery.cycle.js"></script>
+<script type="text/javascript" src="js/ui/ui.core.js"></script>
+<script type="text/javascript" src="js/ui/ui.tabs.js"></script>
+<script type="text/javascript" src="js/date.js"></script>
+<script type="text/javascript" src="js/randomFacts.js"></script>
+<script type="text/javascript" src="greybox/jquery.greybox2.js"></script>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Dinosaurus</title>
+<script type="text/javascript">
+
+$(document).ready(function( ) {
+$('.dropdown').superfish({
+ delay: 400
+ });
+ $('.nav li:has(ul)').find('a:first').addClass('sub');
+ $('.nav ul li:has(ul)').find('a:first').removeClass('sub').
+addClass('subsub');
+ });
+
+/*photos*/
+$(document).ready(function() {
+		$('#photos').cycle({
+			fx: 'scrollRight',
+			timeout: 7000,
+			speed: 500,
+			delay: 4000,
+			pager:'#pager',
+			next: '#next',
+			prev: '#prev'
+							});
+		$('#playControl').toggle(
+			function() {
+				$('#photos').cycle('pause');
+				$(this).text('Play');
+			},
+			function() {
+				$('#photos').cycle('resume');
+				$(this).text('Pause');
+			});
+
+						   });
+$(document).ready(function(){
+		$('#tabSet').tabs();
+							   });
+
+$(document).ready(function( ) {
+$('span.pq').each(function( ) {
+ var quote=$(this).clone( );
+ quote.removeClass('pq');
+ quote.addClass('pullquote');
+ $(this).before(quote);
+ });
+ });
+
+
+$(document).ready(function() {
+  var target = '.bigLink';
+  var hoverClass = 'hoverBigLink';
+
+  $(target).each(function() {
+		$(this).hover(
+      function() {
+         $(this).addClass(hoverClass);
+         status=$(this).find('a').attr('href');
+      },
+      function () {
+         $(this).removeClass(hoverClass);
+      });
+
+    $(this).click(function() {
+       location = $(this).find('a').attr('href');
+    });
+
+    $(this).css('cursor','pointer');
+
+  });
+
+
+  $(target + ' a')
+    .focus(function() {
+      $(this).parents(target).addClass(hoverClass);
+    })
+    .blur(function() {
+			$(this).parents(target).removeClass(hoverClass);
+   });
+
+//beginning of form box
+var gbOptions = {
+		gbWidth: 700,
+		gbHeight: 550	
+	};
+	$('.club a').greybox(gbOptions);
+	
+});
+</script>
+</head>
+
+<body id="twocol">
+<div id="container">
+	<div id="header">
+    <a href="index.html"><img id="logo" src="images/logo.png" /></a>
+    
+ 
+    </div><!--end of header div-->
+    
+             <div id="linkList">
+    <ul class="dropdown">
+        
+        <li><a href="prehistory.html">Prehistory</a>
+            <ul>
+            	<li><a href="prehistory.html">Permian Extinction</a></li>
+        		<li><a href="prehistory.html">Triassic</a></li>
+        		<li><a href="prehistory.html">Jurassic</a></li>
+        		<li><a href="prehistory.html">Cretaceous</a></li>
+        		<li><a href="prehistory.html">Dinosaur Extinction</a></li>
+            </ul>
+       </li>
+       <li><a href="dinosaurs.html">Dinosaurs</a>
+       		<ul>
+            	<li><a href="carnivores.html">Carnivores</a></li>
+        		<li><a href="#">Herbivores</a></li>
+        		<li><a href="#">Omnivores</a></li>
+        		<li><a href="#">Winged</a></li>
+            </ul>
+       </li>
+        <li><a href="fossils.html">Fossils</a></li>
+    	<li><a href="faq.html">Faq</a></li>
+    	<li class="club"><a href="dinoform.html">Club</a></li>
+	    <li> </li>
+        </ul>
+       
+    </div><!--end of linkList div--> 
+    	<div id="search">
+   <!--     <form method="drop" action="search">
+	<input type="text" name="xyz" size="20" />
+	<input type="submit" value="search" />
+	<input type="hidden" name="zoom_cat[]" value="-1">
+	</form>-->
+        		</div><!-- end of search div -->
+                <!--
+    <div id="sideBar">
+    	<div id="linkList2">
+	<ul>
+		<li><a href="index.html"> Home </a></li>
+    	<li><a href="prehistory.html"> Prehistory </a></li>
+    	<li><a href="dinosaurs.html"> Dinosaur </a></li>
+        <li><a href="fossils.html"> Fossils </a></li>
+    	<li><a href="faq.html"> Faq </a></li>
+    	<li class="club"><a href="dinoform.html">Club</a></li>
+	</ul>
+		</div> end of linkList2 
+    </div>end of sideBar div -->
+  
+
+
+   
+ 
+
+<div id="mainContent">
+	<div class="bigLink" id="carnivore">
+    <a href="carnivores.html"><h3>Carnivore</h3></a>
+    <p>Meat-eaters (carnivores or theropods) need to have some way to get meat. Carnivorous dinosaurs usually had long, strong legs so thay they could run quickly in order to catch their prey. They also needed large, strong jaws, sharp teeth, and deadly claws so they could kill and then tear apart the prey. Good eyesight, a keen sense of smell, and a large brain to plan hunting strategies are also very important for successful hunting. Many of the carnivores (like Deinonychus, Coelophysis and Velociraptor) may have hunted in packs, so social cooperation was necessary for a good hunt for some species. </p>
+	<img id"carnivoreIMG" src="images/carnivores.jpg" />   
+    </div>
+    <div class="bigLink" id="herbivore">
+    <a href="#"><h3>Herbivore</h3></a>
+    <p>Plant-eaters (herbivores) usually have blunt teeth that are good for stripping vegetation (leaves, twigs, etc.). Some also have flat teeth for grinding tough plant fibers. Many herbivores have cheek pouches in which they can store food for a while. Plant-eaters usually have to eat a much larger volume of material than meat-eaters (carnivores) do in order to get the same amount of calories (this is because leaves, twigs, and roots are low in calories). Plant-eaters usually have larger digestive systems (than meat-eaters) that are needed to digest large amounts of tough plant fibers. </p>
+     <img id"herbivoreIMG" src="images/herbivores.jpg" />
+	</div>
+    <div class="bigLink" id="omnivore">
+    <a href="#"><h3>Omnivore</h3></a>
+   	<p>Only a few of the known dinosaurs were omnivores (eating both plants and animals). Some examples of omnivores are Ornithomimus and Oviraptor, which ate plants, eggs, insects, etc. Also, most herbivores are "accidental omnivores" because when they eat plants, they accidentally ingest many insects and other small animals. </p>
+    <img id"omnivoreIMG" src="images/omnivores.jpg" />
+   	</div>
+    <div class="bigLink" id="winged">
+    <a href="#"><h3>Winged</h3></a>
+    <p>The Pterodactyls (or Pterodactyloids) were a group of flying reptiles that ranged in size from having a wingspan of a few inches to over 40 feet. They were lightly built with hollow bones, long, curved necks, long skulls, and small bodies. They had large brains and good eyesight. Some had short tails, some had no tails. Some had light-weight, bony head-crests, some did not. . </p>
+    <img id"wingedIMG" src="images/winged.jpg" />
+	</div>
+</div>
+
+
+   	<div id="footer">
+    	<div id="linkList3">
+	<ul>
+        <li><a href="index.html"> Home </a></li>
+        <li><a href="prehistory.html"> Prehistory </a></li>
+        <li><a href="dinosaurs.html"> Dinosaurs </a></li>
+        <li><a href="fossils.html"> Fossils </a></li>
+        <li><a href="faq.html"> Faq </a></li>
+         <li>    <script type="text/javascript">
+	var today = new Date();
+	var message = dateString(today, 'Today is %W, %M %D, %Y');
+	document.write(message);
+</script></li>
+        
+        
+        
+        
+        
+	</ul>
+	</div><!-- end of linkList3 -->
+    </div><!-- end of footer div -->
+</div><!--end of container div -->
+</body>
+</html>

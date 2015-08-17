@@ -1,0 +1,396 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link href="css/dinofossils.css" rel="stylesheet" type="text/css" />
+<link href="greybox/greybox2.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/superfish/superfish.js"></script>
+<script type="text/javascript" src="js/jquery.cycle.js"></script>
+<script type="text/javascript" src="js/ui/ui.core.js"></script>
+<script type="text/javascript" src="js/ui/ui.tabs.js"></script>
+<script type="text/javascript" src="js/date.js"></script>
+<script type="text/javascript" src="js/randomFacts.js"></script>
+<script type="text/javascript" src="greybox/jquery.greybox2.js"></script>
+<script type="text/javascript" src="js/jquery.tablesorter.js"></script>
+<script type="text/javascript" src="js/jquery.cluetip.js"></script>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Fossils</title>
+
+<style type="text/css">
+table {
+	border-right: 1px solid #A7A37E;
+	border-bottom: 1px solid #A7A37E;
+	margin-top: 20px;
+	padding-left: 0px;
+	margin-left: 13px;
+}
+td, th {
+	font-size: 9pt;
+	padding: 3px;
+}
+th {
+	font-weight: bold;
+	border-bottom: 1px solid #bfb78a;
+	background-color:#bfb78a;
+	border-top: 1px solid #bfb78a;
+	padding-top: 4px;
+	border-left: 1px solid #A7A37E;
+}
+td {
+	border-left: 1px solid #A7A37E;
+}
+
+.sortable th {
+	cursor: pointer;	
+}
+th.headerSortDown {
+	background: #bfff00 url(images/down_arrow.png) no-repeat 98% 7px;
+}
+th.headerSortUp {
+	background: #bfff00 url(images/up_arrow.png) no-repeat 98% 5px;	
+}
+.sortable tr.even{
+	background-color: #FFFFFF;
+}
+.sortable tr.odd{
+	background-color:#8D9D63;	
+}
+#fossilh {
+	margin-left:0px;
+	width: 960px;	
+}
+h1 {
+	font-family: Century Gothic, Verdana, Geneva, sans-serif;
+	color: #FFF;
+	padding-left: 10px;
+}
+#main p {
+	font-family: Century Gothic, Verdana, Geneva, sans-serif;
+	font-size:14px;
+	padding-left: 20px;
+	padding-right: 20px;
+}	
+</style>
+
+<script type="text/javascript">
+$(document).ready(function( ) {
+$('.dropdown').superfish({
+ delay: 400
+ });
+ $('.nav li:has(ul)').find('a:first').addClass('sub');
+ $('.nav ul li:has(ul)').find('a:first').removeClass('sub').
+addClass('subsub');
+
+$('.answer').hide();
+  $('#mainfaq h2').toggle(
+  function(){
+	  $(this).next('.answer').fadeIn();
+	  $(this).addClass('close');
+  },
+  function(){
+	  $(this).next('.answer').fadeOut();
+	  $(this).removeClass('close');
+  }
+ ); //end of toggle()
+
+//beginning of form box
+var gbOptions = {
+		gbWidth: 700,
+		gbHeight: 550	
+	};
+	$('.club a').greybox(gbOptions);
+
+
+$('table').tablesorter({widgets:['zebra']});	
+
+$('.tip').cluetip({
+		arrows: true,
+		fx: {
+			open: 'fadeIn',
+			openSpeed: 500
+		}
+	});
+	
+}); // end ready
+</script>
+</head>
+
+<body id="twocol">
+	<div id="container">
+		<div id="header">
+    		<a href="index.html"><img id="logo" src="images/logo.png" /></a>
+     	</div><!--end of header div-->
+    
+        <div id="linkList">
+    		<ul class="dropdown">
+               <li><a href="prehistory.html">Prehistory</a>
+        		    <ul>
+            			<li><a href="prehistory.html">Permian Extinction</a></li>
+                        <li><a href="prehistory.html">Triassic</a></li>
+                        <li><a href="prehistory.html">Jurassic</a></li>
+                        <li><a href="prehistory.html">Cretaceous</a></li>
+                        <li><a href="prehistory.html">Dinosaur Extinction</a></li>
+                    </ul>
+		       </li>
+       			<li><a href="dinosaurs.html">Dinosaurs</a>
+       				<ul>
+                        <li><a href="carnivores.html">Carnivores</a></li>
+                        <li><a href="#">Herbivores</a></li>
+                        <li><a href="#">Omnivores</a></li>
+                        <li><a href="#">Winged</a></li>
+                    </ul>
+		       </li>
+                <li><a href="fossils.html">Fossils</a></li>
+                <li><a href="faq.html">Faq</a></li>
+                <li class="club"><a href="dinoform.html">Club</a></li>
+           </ul>
+ 		</div><!--end of linkList div--> 
+    	
+        <div id="search">
+        <!--<form method="drop" action="search">
+	<input type="text" name="xyz" size="20" />
+	<input type="submit" value="search" />
+	<input type="hidden" name="zoom_cat[]" value="-1">
+	</form>-->
+        </div><!-- end of search div -->
+    <!--
+    	<div id="sideBar">
+    		<div id="linkList2">
+                <ul>
+                    <li><a href="index.html"> Home </a></li>
+                    <li><a href="prehistory.html"> Prehistory </a></li>
+                    <li><a href="dinosaurs.html"> Dinosaur </a></li>
+                    <li><a href="fossils.html"> Fossils </a></li>
+                    <li><a href="faq.html"> Faq </a></li>
+                    <li class="club"><a href="dinoform.html">Club</a></li>
+                </ul>
+			</div>end of linkList2 
+  		</div>end of sideBar div -->
+  
+
+
+   
+ 
+
+<div id="mainContent">
+	 <div id="contentWrap">
+    <div id="main">
+   		<img id="fossilh" src="images/fossilheader.jpg"/> 
+        
+        
+        <h1>What are Fossils?</h1>
+        
+        <p>The only direct way we have of learning about dinosaurs is by studying fossils. Fossils are the remains of ancient animals and plants, the traces or impressions of living things from past geologic ages, or the traces of their activities. Fossils have been found on every continent on Earth, maybe even near where you live. 
+		</p>
+        
+        <h1>Finding Fossils</h1>
+        
+        <p>Since fossils are buried during their formation, finding them can be difficult. Paleontologists do a lot of research to decide where to dig for dinosaurs . To choose an optimal location for a dig, they choose sedimentary rock - shale, sandstone, or limestone (this is where most fossils were preserved), a sedimentary layer from the Mesozoic Era (when the dinosaurs lived). Exposed sedimentary rock is pretty easy to identify - it's in layers. To find an example of exposed sedimentary rock in your area, look at the cut-out area where highways go through hills. The layers should be easily visible. Other places to look are cliffs, rock outcroppings, canyons, badlands, etc.,a place that was not an ocean or lake during the Mesozoic, because the dinosaurs lived only on land. Areas where fossil-bearing sedimentary rock erode quickly (because of rain, flooding, wind, etc.) are good for finding fossils. Rarely, fossils are observed just sticking out of the ground. More often, paleontologists must do enormous amounts of work to find, excavate , and prepare fossils. </p>
+        
+        <a href="#" title="tfossil" class="tip" rel="head.html" ><img id="trexside"  border="0" src ="images/trexside.jpg" /></a>
+
+<!--<map name="trexfossil">
+<area shape="rect" coords="708,84,548,188"  href="#">
+<area shape="rect" coords="512,126,372,216" href="#">
+<area shape="rect" coords="246,144,142,180" href="#">
+<area shape="rect" coords="318,342,288,384" href="#">
+</map>-->
+<!--
+          <table width="97%" border="0" cellspacing="0" cellpadding="0" class="sortable">
+        <thead>
+          <tr>
+            <th scope="col">Places</th>
+            <th scope="col">Dinosaur</th>
+            <th scope="col">Continent</th>
+            <th scope="col"># of Fossils</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>Alabama, USA</td>
+            <td>Lophorhothon</td>
+            <td>North America</td>
+            <td>3</td>
+          </tr>
+          <tr>
+            <td>Alberta, Canada</td>
+            <td>Albertosaurus</td>
+            <td>North America</td>
+            <td>5</td>
+          </tr>
+          <tr>
+            <td>Nova Scotia, Canada</td>
+            <td>Ammosaurus</td>
+            <td>North America</td>
+            <td>8</td>
+          </tr>
+          <tr>
+            <td>Texas, USA</td>
+            <td>Camptosaurus</td>
+            <td>North America</td>
+            <td>7</td>
+          </tr>
+          <tr>
+            <td>Wyoming, USA</td>
+            <td>Hesperisaurus</td>
+            <td>North America</td>
+            <td>9</td>
+          </tr>
+          <tr>
+            <td>Brazil</td>
+            <td>Irritator</td>
+            <td>South America</td>
+            <td>20</td>
+          </tr>
+          <tr>
+            <td>Urugay</td>
+            <td>Argyrosaurus</td>
+            <td>South America</td>
+            <td>10</td>
+          </tr>
+          <tr>
+            <td>Patagonia, Argentina</td>
+            <td>Patagosaurus</td>
+            <td>South America</td>
+            <td>25</td>
+          </tr>
+          <tr>
+            <td>Namibia</td>
+            <td>Massospondylus</td>
+            <td>Africa</td>
+            <td>20</td>
+          </tr>
+          <tr>
+            <td>Tanzania</td>
+            <td>Brachiosaurus</td>
+            <td>Africa</td>
+            <td>34</td>
+          </tr>
+          <tr>
+            <td>Morocco</td>
+            <td>Cetiosaurus</td>
+            <td>Africa</td>
+            <td>50</td>
+          </tr>
+          <tr>
+            <td>Egypt</td>
+            <td>Dieraeosaurus</td>
+            <td>Africa</td>
+            <td>2</td>
+          </tr>
+          <tr>
+          	<td>Korea</td>
+            <td>Ultrasaurus</td>
+            <td>Asia</td>
+            <td>12</td>
+          </tr>
+          <tr>
+          	<td>Manchuria,China</td>
+            <td>Mandschurosaurus</td>
+            <td>Asia</td>
+            <td>1</td>
+          </tr>
+          <tr>
+          	<td>Mongolia</td>
+            <td>Citipati</td>
+            <td>Asia</td>
+            <td>40</td>
+          </tr>
+          <tr>
+          	<td>Russia</td>
+            <td>Aralosaurus</td>
+            <td>Asia</td>
+            <td>10</td>
+          </tr>
+          <tr>
+          	<td>Tibet</td>
+            <td>Monkonosaurus</td>
+            <td>Asia</td>
+            <td>1</td>
+          </tr>
+          <tr>
+          	<td>England</td>
+            <td>Stenopelix</td>
+            <td>Europe</td>
+            <td>50</td>
+          </tr>
+           <tr>
+          	<td>Hungary</td>
+            <td>Rhabdodon</td>
+            <td>Europe</td>
+            <td>4</td>
+          </tr>
+           <tr>
+          	<td>Italy</td>
+            <td>Scipionyx</td>
+            <td>Europe</td>
+            <td>4</td>
+          </tr>
+           <tr>
+          	<td>Solnhofen, Germany</td>
+            <td>Archaeopteryx</td>
+            <td>Europe</td>
+            <td>5</td>
+          </tr>
+           <tr>
+          	<td>Spain</td>
+            <td>Hypselosaurus</td>
+            <td>Europe</td>
+            <td>7</td>
+          </tr>
+           <tr>
+          	<td>Queensland</td>
+            <td>Agrosaurus</td>
+            <td>Austrlia</td>
+            <td>4</td>
+          </tr>
+           <tr>
+          	<td>New Zealand</td>
+            <td>Sauropod</td>
+            <td>Australia</td>
+            <td>13</td>
+          </tr>
+           <tr>
+          	<td>Victoria</td>
+            <td>Fulgurotherium</td>
+            <td>Australia</td>
+            <td>7</td>
+          </tr>
+           <tr>
+          	<td>James Ross Island</td>
+            <td>Ankylosaur</td>
+            <td>Antarctica</td>
+            <td>2</td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+</div>
+-->
+
+   	<div id="footer">
+    	<div id="linkList3">
+	<ul>
+        <li><a href="index.html"> Home </a></li>
+        <li><a href="prehistory.html"> Prehistory </a></li>
+        <li><a href="dinosaurs.html"> Dinosaurs </a></li>
+        <li><a href="fossils.html"> Fossils </a></li>
+        <li><a href="faq.html"> Faq </a></li>
+        <li>
+            <script type="text/javascript">
+				var today = new Date();
+				var message = dateString(today, 'Today is %W, %M %D, %Y');
+				document.write(message);
+			</script>
+        </li>
+        <li> <h5> Information from www.EnchantedLearning.com  </h5></li>
+        
+        
+        
+        
+	</ul>
+	</div><!-- end of linkList3 -->
+    </div><!-- end of footer div -->
+</div><!--end of container div -->
+</body>
+</html>

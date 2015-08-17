@@ -1,0 +1,200 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link href="css/dinofaq.css" rel="stylesheet" type="text/css" />
+<link href="greybox/greybox2.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/superfish/superfish.js"></script>
+<script type="text/javascript" src="js/jquery.cycle.js"></script>
+<script type="text/javascript" src="js/ui/ui.core.js"></script>
+<script type="text/javascript" src="js/ui/ui.tabs.js"></script>
+<script type="text/javascript" src="js/date.js"></script>
+<script type="text/javascript" src="js/randomFacts.js"></script>
+<script type="text/javascript" src="greybox/jquery.greybox2.js"></script>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Dinosaurus</title>
+
+<style type="text/css">
+#mainfaq {
+	padding-top: 60px;	
+}
+#mainfaq p {
+	font-size: 14px;
+	padding-right: 25px;
+}	
+#mainfaq h2 {
+	padding-left: 20px;
+	cursor: pointer;
+}
+
+#mainfaq .answer {
+  padding-left: 40px;
+  font-size:14px;
+
+}
+#mainfaq h6 {
+  padding-left: 20px;
+  color:#FFF;	
+}
+</style>
+
+<script type="text/javascript">
+
+$(document).ready(function( ) {
+$('.dropdown').superfish({
+ delay: 400
+ });
+ $('.nav li:has(ul)').find('a:first').addClass('sub');
+ $('.nav ul li:has(ul)').find('a:first').removeClass('sub').
+addClass('subsub');
+
+$('.answer').hide();
+  $('#mainfaq h2').toggle(
+  function(){
+	  $(this).next('.answer').fadeIn();
+	  $(this).addClass('close');
+  },
+  function(){
+	  $(this).next('.answer').fadeOut();
+	  $(this).removeClass('close');
+  }
+ ); //end of toggle()
+
+//beginning of form box
+var gbOptions = {
+		gbWidth: 700,
+		gbHeight: 550	
+	};
+	$('.club a').greybox(gbOptions);
+
+}); // end ready
+
+  $('.clue').cluetip({
+	splitTitle: '|',
+	leftOffset: -30
+	});
+</script>
+</head>
+
+<body id="twocol">
+<div id="container">
+	<div id="header">
+    <a href="index.html"><img id="logo" src="images/logo.png" /></a>
+    
+ 
+    </div><!--end of header div-->
+    
+             <div id="linkList">
+    <ul class="dropdown">
+        
+        <li><a href="prehistory.html">Prehistory</a>
+            <ul>
+            	<li><a href="prehistory.html">Permean Extinction</a></li>
+        		<li><a href="prehistory.html">Triassic</a></li>
+        		<li><a href="prehistory.html">Jurassic</a></li>
+        		<li><a href="prehistory.html">Cretaceous</a></li>
+        		<li><a href="prehistory.html">Dinosaur Extinction</a></li>
+            </ul>
+       </li>
+       <li><a href="dinosaurs.html">Dinosaurs</a>
+       		<ul>
+            	<li><a href="carnivores.html">Carnivores</a></li>
+        		<li><a href="#">Herbivores</a></li>
+        		<li><a href="#">Omnivores</a></li>
+        		<li><a href="#">Winged</a></li>
+            </ul>
+       </li>
+        <li><a href="fossils.html">Fossils</a></li>
+    	<li><a href="faq.html">Faq</a></li>
+    	<li class="club"><a href="dinoform.html">Club</a></li>
+	    <li> </li>
+        </ul>
+       
+    </div><!--end of linkList div--> 
+    	<div id="search">
+<!--        <form method="drop" action="search">
+	<input type="text" name="xyz" size="20" />
+	<input type="submit" value="search" />
+	<input type="hidden" name="zoom_cat[]" value="-1">
+	</form>-->
+        		</div><!-- end of search div -->
+    <!--<div id="sideBar">
+    	<div id="linkList2">
+	<ul>
+		<li><a href="index.html"> Home </a></li>
+    	<li><a href="prehistory.html"> Prehistory </a></li>
+    	<li><a href="dinosaurs.html"> Dinosaur </a></li>
+        <li><a href="fossils.html"> Fossils </a></li>
+    	<li><a href="faq.html"> Faq </a></li>
+    	<li class="club"><a href="dinoform.html">Club</a></li>
+	</ul>
+		</div> end of linkList2
+    </div>end of sideBar div -->
+  
+
+
+   
+ 
+
+<div id="mainContent">
+	 <div id="mainfaq">
+  	  <h2 class="clue" title="Click for the answer!">When Were dinosaurs found?</h2>
+      <div class="answer">
+        <p>from 250 million yrs ago up until 65 million yrs. There were life forms much earlier but they were not dinosaurs. They were during a timeline called "Early life". The creatures were reptiles, bugs, fish, shell fish, and so on. Later on after the cretaceous era(65 million) years ago dinosaur fossil dating never went past. It was as if they all just vanished off the face of the planet. </p>
+      </div>
+      <h2 class="clue" title="Click for the answer!">Where did dinosaurs Come from? </h2>
+      <div class="answer">
+        <p>Huh.......Actually it a pretty simple concept called evolution. Through millions of years creatures started to evolve and become more and more adjusted to different area's of the world. With this they went through major changes. I realize this is pretty hard to believe but things do evolve over a very long period of time. Its very hard to track but there's even traces in humans where we have evolved a little bit from 100yrs ago. Supposedly humans are averaging shorter than 100yrs ago.</p>
+      </div>
+      <h2 class="clue" title="Click for the answer!">What did dinosaurs eat? </h2>
+      <div class="answer">
+        <p>Their were herbivores and Carnivores. Herbivores ate plants, leaves, vegetables, nuts, etc. The carnivores hunted and ate other dinosaurs and animals. </p>
+      </div>
+      <h2 class="clue" title="Click for the answer!">Will We Ever See a Live Dinosaur? </h2>
+      <div class="answer">
+        <p>I predict never. Even though it would be as cool as ever 99% of the world is sure that they are extinct. There is a rumor that deep in a Africa jungle there is a few lurking around, but that has about as much proof as big foot (none). Obviously a satilitte Would've captured this.  </p>
+      </div>
+      <h2 class="clue" title="Click for the answer!">Are all fossil animals dinosaurs? </h2>
+      <div class="answer">
+        <p>Heck no. There was fish, ancient tigers, mammals, sharks, insects. A bunch of weird looking fossils of lifeforms have been found. I was really fascinated of the prehistoric dragonfly. You should really look it up. It was huge.</p>
+      </div>
+      <h2 class="clue" title="Click for the answer!">Did people and dinosaurs live at the same time? </h2>
+      <div class="answer">
+        <p>The bible says yes, but scientists have never found Homo sapiens human relatives only as early as the Ice Age which was 1.75 years ago. Dinosaurs were long gone leaving a gap of about 64 million years.  </p>
+      </div>
+      <h2 class="clue" title="Click for the answer!">Where did dinosaurs live?  </h2>
+      <div class="answer">
+        <p>Everywhere in the world. Some where found in Canada, US, UK, China, France, etc. Not only that but some in the ocean an others in the desert. They were scattered along the planet.
+Did all the dinosaurs live together, and at the same time?: No, species here and there became extinct between timeline Era's. They were not all bunched together. The dinosaurs of the triassic era where a lot smaller and probably evolved or died off by the time of the cretaceous era. </p>
+      </div>
+	
+  </div>
+</div>
+
+
+   	<div id="footer">
+    	<div id="linkList3">
+	<ul>
+        <li><a href="index.html"> Home </a></li>
+        <li><a href="prehistory.html"> Prehistory </a></li>
+        <li><a href="dinosaurs.html"> Dinosaurs </a></li>
+        <li><a href="fossils.html"> Fossils </a></li>
+        <li><a href="faq.html"> Faq </a></li>
+        <li>
+            <script type="text/javascript">
+				var today = new Date();
+				var message = dateString(today, 'Today is %W, %M %D, %Y');
+				document.write(message);
+			</script>
+        </li>
+        <li> <h5> Questions and Answers from www.dinosaurfact.net  </h5></li>
+        
+        
+        
+        
+	</ul>
+	</div><!-- end of linkList3 -->
+    </div><!-- end of footer div -->
+</div><!--end of container div -->
+</body>
+</html>

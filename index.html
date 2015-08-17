@@ -1,0 +1,174 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link href="css/dinocss.css" rel="stylesheet" type="text/css" />
+<link href="greybox/greybox2.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/superfish/superfish.js"></script>
+<script type="text/javascript" src="js/jquery.cycle.js"></script>
+<script type="text/javascript" src="js/date.js"></script>
+<script type="text/javascript" src="js/randomFacts.js"></script>
+<script type="text/javascript" src="greybox/jquery.greybox2.js"></script>
+<!--<script type="text/javascript" src="js/dinobox.js"></script>-->
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Dinosaurus</title>
+<script type="text/javascript">
+$(document).ready(function( ) {
+	
+//Jquery for dropdown menu. using superfish plug in, calls the dropdown class and tells it to use superfish
+		$('.dropdown').superfish({ delay: 400 });
+		$('.nav li:has(ul)').find('a:first').addClass('sub');
+		$('.nav ul li:has(ul)').find('a:first').removeClass('sub').addClass('subsub');
+
+
+//start of the slideshow jquery 
+		$('#photos').cycle({
+					fx: 'scrollRight',
+					timeout: 7000,
+					speed: 500,
+					delay: 4000,
+					pager:'#pager',
+					next: '#next',
+					prev: '#prev',
+					width: '960px',
+					height: '362px'
+		});
+		$('#playControl').toggle(
+			function() {
+				$('#photos').cycle('pause');
+				$(this).text('Play');
+			},
+			function() {
+				$('#photos').cycle('resume');
+				$(this).text('Pause');
+		});
+
+//beginning of form box for opening in a new window
+		var gbOptions = {
+				gbWidth: 700,
+				gbHeight: 550	
+			};
+		$('.club a').greybox(gbOptions);
+
+});// end of document write
+</script>
+</head>
+
+<body>
+
+    <div id="container">
+            <div id="header">
+            <a href="index.html"><img id="logo" src="images/logo.png" /></a>
+            </div><!--end of header div-->
+        
+        	<div id="photos"> <!--prepare images for slideshow-->
+    			<div>
+                	<img src="images/permian.jpg" alt="permian" width="960" height="361">
+    				<p>Start image one!</p>
+    			</div>
+   				<div>
+                    <img src="images/triassic.jpg" alt="Tree" width="960" height="361">
+                    <p>image two!</p>
+   				</div>
+                <div>
+                    <img src="images/jurassic.jpg" alt="tallGrass" width="960" height="361">
+                    <p>image three!</p>
+                </div>
+                <div>
+                    <img src="images/cretaceous.jpg" alt="tallGrass" width="960" height="361">
+                    <p>image three!</p>
+                </div>
+                <div>
+                    <img src="images/extinction.jpg" alt="tallGrass" width="960" height="361">
+                    <p>image three!</p>
+                </div>
+ 		   </div> <!-- end of slideshow images -->
+           
+           <div id="linkList"> <!-- prepare links for dropdown -->
+                <ul class="dropdown">
+                    <li><a href="prehistory.html">Prehistory</a> <!-- ul within the links to signal what is the dropdown -->
+                        <ul>
+                            <li><a href="prehistory.html">Permian Extinction</a></li>
+                            <li><a href="prehistory.html">Triassic</a></li>
+                            <li><a href="prehistory.html">Jurassic</a></li>
+                            <li><a href="prehistory.html">Cretaceous</a></li>
+                            <li><a href="prehistory.html">Dinosaur Extinction</a></li>
+                        </ul>
+                   	</li>
+                   	<li><a href="dinosaurs.html">Dinosaurs</a>
+                        <ul>
+                            <li><a href="carnivores.html">Carnivores</a></li>
+                            <li><a href="#">Herbivores</a></li>
+                            <li><a href="#">Omnivores</a></li>
+                            <li><a href="#">Winged</a></li>
+                        </ul>
+                   	</li>
+                    <li><a href="fossils.html">Fossils</a></li>
+                    <li><a href="faq.html">Faq</a></li>
+                    <li class="club"><a href="dinoform.html">Club</a></li>
+                 </ul>
+           </div><!--end of linkList div--> 
+           
+           
+           <div id="search"><!-- keep for nav bar, took out search it is unnecessary, fix later -->
+  <!--          <form method="drop" action="search">
+        <input type="text" name="xyz" size="20" />
+        <input type="submit" value="search" />
+        <input type="hidden" name="zoom_cat[]" value="-1">
+        </form>-->
+           </div><!-- end of search div -->
+        
+           <div id="sideBar">
+           
+           		<!--<div id="linkList2">
+                    <ul>
+                        <li><a href="index.html"> Home </a></li>
+                        <li><a href="dinosaurs.html"> Dinosaurs </a></li>
+                        <li><a href="fossils.html"> Fossils </a></li>
+                        <li><a href="faq.html"> Faq </a></li>
+                        <li class="club"><a href="dinoform.html"> Club </a></li>
+                	</ul>
+          		</div>end of linkList2 -->
+           </div><!--end of sideBar div -->
+      
+           <div id="body">
+                <div id="controls">
+                      <span id="prev" class="control"> <<</span>
+                      <span id="pager"></span>
+                      <span id="next" class="control"> >> </span>
+                      <span id="playControl" class="control">Pause</span>
+                </div>
+	           <img id="home" src="images/home.png" />
+     
+                <img src="images/greeting.png" id="greet" />
+                <img src="images/vinny.png" id="vinny" />
+                <p id="randomFact">"<script type="text/javascript">
+                    randomFact();
+                </script>"
+                </p>
+                
+	      </div><!-- end of body div-->
+         
+         
+          <div id="footer">
+               <div id="linkList3">
+               		 <ul>
+                            <li><a href="index.html"> Home </a></li>
+                            <li><a href="faq.html"> Faq </a></li>
+                            <li><a href="fossils.html"> Fossils </a></li>
+                            <li><a href="dinosaurs.html"> Dinosaurs </a></li>
+                            <li><a href="prehistory.html"> Prehistory </a></li>
+                            <li>    
+								<script type="text/javascript">
+                        			var today = new Date();
+									var message = dateString(today, 'Today is %W, %M %D, %Y');
+									document.write(message);
+			                    </script>
+                            </li>
+                            <li> <h5> Photo Credits : Nuke Banana, Kerem Beyit, Yossy-B, Listverse. </h5></li>
+                     </ul>
+                </div><!-- end of linkList3 -->
+          </div><!-- end of footer div -->
+    </div><!--end of container div --> 
+</body>
+</html>

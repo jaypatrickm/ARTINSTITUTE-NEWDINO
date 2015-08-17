@@ -1,0 +1,261 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<link href="css/prehistorycss.css" rel="stylesheet" type="text/css" />
+<link href="greybox/greybox2.css" rel="stylesheet" type="text/css">
+<script type="text/javascript" src="js/jquery.js"></script>
+<script type="text/javascript" src="js/superfish/superfish.js"></script>
+<script type="text/javascript" src="js/jquery.cycle.js"></script>
+<script type="text/javascript" src="js/ui/ui.core.js"></script>
+<script type="text/javascript" src="js/ui/ui.tabs.js"></script>
+<script type="text/javascript" src="js/date.js"></script>
+<script type="text/javascript" src="js/randomFacts.js"></script>
+<script type="text/javascript" src="greybox/jquery.greybox2.js"></script>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Prehistory</title>
+<script type="text/javascript">
+$(document).ready(function( ) {
+	
+//Jquery for dropdown menu. using superfish plug in, calls the dropdown class and tells it to use superfish	
+	$('.dropdown').superfish({ delay: 400 });
+	$('.nav li:has(ul)').find('a:first').addClass('sub');
+	$('.nav ul li:has(ul)').find('a:first').removeClass('sub').addClass('subsub');
+ 
+
+
+//set tabs		
+	$('#tabSet').tabs();					
+//add pullquotes	
+	$('span.pq').each(function( ) {
+		 var quote=$(this).clone( );
+		 quote.removeClass('pq');
+		 quote.addClass('pullquote');
+ 	$(this).before(quote);
+	});
+ 
+//beginning of form box for opening in a new window
+	var gbOptions = {
+		gbWidth: 700,
+		gbHeight: 550	
+	};
+	$('.club a').greybox(gbOptions);
+
+ });
+</script>
+</head>
+
+<body id="twocol">
+	<div id="container">
+       
+        <div id="header">
+	        <a href="index.html"><img id="logo" src="images/logo.png" /></a>
+        </div><!--end of header div-->
+    
+        <div id="linkList">
+    		<ul class="dropdown">
+               <li><a href="prehistory.html">Prehistory</a>
+       			     <ul>
+                        <li><a href="prehistory.html">Permian Extinction</a></li>
+                        <li><a href="prehistory.html#panel2">Triassic</a></li>
+                        <li><a href="prehistory.html">Jurassic</a></li>
+                        <li><a href="prehistory.html">Cretaceous</a></li>
+                        <li><a href="prehistory.html">Dinosaur Extinction</a></li>
+	                 </ul>
+    		  </li>
+       		  <li><a href="dinosaurs.html">Dinosaurs</a>
+       				<ul>
+                        <li><a href="carnivores.html">Carnivores</a></li>
+                        <li><a href="#">Herbivores</a></li>
+                        <li><a href="#">Omnivores</a></li>
+                        <li><a href="#">Winged</a></li>
+                    </ul>
+	          </li>
+              <li><a href="fossils.html">Fossils</a></li>
+              <li><a href="faq.html">Faq</a></li>
+              <li class="club"><a href="dinoform.html">Club</a></li>
+            </ul><!-- end of dropdown-->
+       
+    	</div><!--end of linkList div--> 
+    	
+        <div id="search">
+ <!--       <form method="drop" action="search">
+	<input type="text" name="xyz" size="20" />
+	<input type="submit" value="search" />
+	<input type="hidden" name="zoom_cat[]" value="-1">
+	</form>-->
+        </div><!-- end of search div -->
+    
+    <!--
+       <div id="sideBar">
+       		<div id="linkList2">
+				<ul>
+                    <li><a href="index.html"> Home </a></li>
+                    <li><a href="prehistory.html"> Prehistory </a></li>
+                    <li><a href="dinosaurs.html"> Dinosaur </a></li>
+                    <li><a href="fossils.html"> Fossils </a></li>
+                    <li><a href="faq.html"> Faq </a></li>
+                    <li class="club"><a href="dinoform.html">Club</a></li>
+                </ul>
+			</div> end of linkList2 
+       </div>end of sideBar div -->
+  
+	   <div id="mainContent">
+
+          <ul id="tabSet"> <!-- start making tabs, separating through five panels -->
+            <li><a href="#panel1">Permian Extinction</a></li>
+            <li><a href="#panel2" >Triassic Period</a></li>
+            <li><a href="#panel3">Jurassic Period</a></li>
+            <li><a href="#panel4">Cretaceous Period</a></li>
+            <li><a href="#panel5">Dinosaur Extinction</a></li>
+          </ul>
+  		
+        	<div id="panel1">
+  				   		   <p>
+The Permian period, which lasted from 290 to 248 million years ago, <span class="pq">"ended with the world’s most devastating extinction event of all time."</span> Over 90 percent of Earth’s species, including insects, plants, marine animals, amphibians and reptiles, were destroyed worldwide. The Permian is therefore remembered as the time when life came the closest ever to being wiped off the face of the planet.
+               </p>
+
+	<h3>Permian Geology</h3>
+
+			   <p>
+The beginning of the Permian did not suggest the mass extinctions that would follow, although geological change was afoot. Due to crustal plate movement, the world’s lands joined together to form a supercontinent known as Pangea. Shaped like a gigantic crescent, with present day Eurasia at the top and Antarctica and Australia at the bottom, Pangea stretched from the North Pole to the South Pole. The space formed inside the continental crescent held the Tethys Sea, while the enormous Panthalassa Ocean covered the rest of the globe.
+               </p>
+
+	<h3>Animals and Plants</h3>
+
+			   <p>
+Pangea’s unusual fused configuration meant that animals and plants could move, or distribute, with relative ease and with few barriers. The interior of the supercontinent was quite hot and dry, however, as it was far removed from the two large water bodies. Great forests of plants resembling today’s ferns, which had thrived in other parts of the Paleozoic era, began to shift to seed-bearing plants. Cone-bearing plants, similar to today’s pine trees, also emerged.
+               </p>
+
+		 	   <p>
+The animals that lived among such greenery would look like aliens in today’s modern world. Diplocaulus, for example, was an amphibian with the body of a salamander and a head shaped like a big boomerang. Mesosaurus, on the other hand, resembled a sinister alligator, with teeth as thin and sharp as needles housed in long, strong jaws. The armored Cacops had a body shaped like a Volkswagen bug, with ears that could pick up faint sounds. Yet it had glazed over eyes, which inspired the meaning of its name, "Looking like a blind man."
+               </p>
+
+	<h3>The Great Dying</h3>
+
+			   <p>
+Just over 251 million years ago, the Permian extinction event, also called the Great Dying, took place. To this day, no one is certain why so many species and entire ecosystems disappeared. Estimates vary, but it’s believed that 96 percent of all marine life and 70 to 80 percent of all land-dwelling animals perished. Proposed theories for the extinctions include an asteroid hit, increased volcanic activity, drastic climate changes, or perhaps a series of damaging events.
+			  </p>
+
+	<h3>Stage Set for Dinosaurs</h3>
+
+			  <p>
+Recent studies suggest animal communities that survived the Great Dying took approximately 30 million years to recover. At first opportunistic creatures, like the plant-eating, pig-sized, Lystrosaurus filled empty ecosystem gaps. Although reptiles, like massive, spiked Scutosaurus bit the dust, new reptile species emerged in their place during later periods. This dramatic shift led to a vibrant new era: the dinosaur age.
+              </p>
+			</div>
+	
+    	   <div id="panel2">
+ 	    	      <a name="triassic"><p>
+Sandwiched between the world’s largest known extinction event and the animal-rich Jurassic, the Triassic period marked a phase of transition and recovery. Spanning from 251 to 200 million years ago, the Triassic was the first part of Mesozoic, <span class="pq">which means the "age of middle life."</span> This time is also often referred to as the "age of dinosaurs," since dinosaurs were the most notable, successful and diverse creatures to emerge during the Triassic.
+			  </p></a>
+
+		<h3>Triassic Geology and Climate</h3>
+
+			  <p>The supercontinent Pangea, comprising all of today’s continents fused together, slowly began to drift northward during the Triassic. In the Middle Triassic, the gargantuan landmass showed signs of breakage. Cracks developed in what is now North America, northwest Africa, west and central Europe. These rifts were the first indications that the supercontinent would later split apart into separate, smaller continents.
+             </p>
+
+			  <p>Fossils and geological studies indicate that the climate was mild, warm or scorching hot, depending on the location. North America, which then rested near the equator, experienced subtropical conditions from Wyoming to New England. Gingkoes, cone-bearing trees and other evergreen plant species flourished in such milder weather regions.</p>
+
+		<h3>Mammals, Marine Life and Archosaurs</h3>
+
+			  <p>Although reptiles ruled the Triassic, this period also saw the emergence of the world’s first true mammals. While scientists continue to debate which mammals appeared first, weasel-like creatures, such as Morganucodon watsoni or Gondwanadon tapani, are likely candidates. It’s believed these first mammals were small, nocturnal insect eaters. They were also warm-blooded and furry.</p>
+
+			  <p>The oceans were full of bizarre-looking creatures like Nanchangosaurus, with its snapping jaws and eel-like tail. Ichthyosaurs, which looked like dolphins on steroids, as well as large, round Shonisaurus, also lived in Triassic waters. At about the same time, several dinosaur-like creatures emerged. Herrerasaurus, for example, was a direct archosaur ancestor to dinosaurs. It possessed clawed, three-fingered hands and sturdy hind legs that allowed it to chase down prey. Its textured skin functioned like military fatigues, helping to camouflage the carnivore as it hid in vegetation, waiting to pounce on victims.</p>
+
+	   <h3>Triassic Dinosaurs</h3>
+
+			  <p>Dinosaurs diverged from archosaurs and came into their own around 230 million years ago. Eoraptor was one of the earliest known dinosaurs. It was only about 40 inches long, but this carnivore was built for speed and stealthy hunting. Its hand claws could tear apart prey, while its muscular hind legs allowed it to sprint towards victims. Another early dinosaur was Pisanosaurus. This plant eater could also walk on its hind legs, but it used its hands to gather ferns and other edible greenery. At up to 39 feet in length, Euskelosaurus was one of the largest early dinosaurs. The long-necked creature also consumed plant material, but it could walk on all fours or use its tail like a tripod stand, allowing it to rear up on its back legs to reach tall foliage.</p>
+ 			</div>
+  	
+    		<div id="panel3">
+   			    <p>Although the entire Mesozoic era is often referred to as the age of dinosaurs, dino domination really took hold during the Jurassic period 200 to 145 million years ago. Some of the world’s largest and most vicious beasts walked the Earth then, such as Allosaurus, which could chop victims into pieces with its axe-like jaws. Reptiles ruled not only the land, but also the sea and air, <span class="pq">with the first known birds emerging during the Jurassic.</span> This explosion of life was made possible by dramatic geological changes that put an end to supercontinent Pangea while beginning the land reconfigurations that would help to shape our present-day world.</p>
+
+	<h3>Jurassic Geology and Climate</h3>
+
+	<p>The rifts within Pangea that began its break-up during the Triassic widened, causing Africa to split from South America and India to move toward Asia. North America broke off and drifted to the west. As a result of such widespread continental movement, the Atlantic Ocean was born between newly separated landmasses. North America’s drift triggered volcanic activity that eventually would lead to the rise of the Rocky Mountains.</p>
+
+	<p>The new bodies of water resulted in moist winds that brought rain to formerly dry and barren regions. Instead of severe heat, most areas now experienced comfortably warm conditions. Evidence of widespread coral reefs also suggests the overall atmosphere was moist and temperate or tropical, providing the perfect backdrop for animal and plant life.</p>
+
+	<h3>Plants</h3>
+
+	<p>Although many plants and trees fared well during the Triassic, the Jurassic was by far more lush and verdant. Relatives of today’s pines, giant sequoias and monkey puzzle trees towered over many areas. Palm-like cycadeoids and ginkgoes also flourished. Ferns and horsetails grew in abundance, becoming the staple food for the Jurassic’s iconic life-form, dinosaurs.</p>
+
+	<h3>Plant-Eating Dinosaurs</h3>
+
+	<p>Plant-eating dinosaurs, known as prosauropods, were one of the more common vertebrates during the Early Jurassic. By the later phase of this period, however, large sauropods became the predominant herbivores. Apatosaurus, for example, grew up to 90 feet in length and ate incredible amounts of foliage to sustain its 30-ton body. At up to 148 feet in length, Seismosaurus, meaning "Earthquake Lizard," outgrew even Apatosaurus. Its head was so small and its body so big that more than 200 gastroliths, or stomach stones, were needed to help pulverize the constantly incoming food. Stegosaurs formed another common Jurassic herbivorous group. These slow movers spent much of their time feasting on leaves and other plant material with their horned, toothless beaks.</p>
+
+	<h3>Carnivorous Dinosaurs</h3>
+
+	<p>With so many dinosaurs roaming the planet, the Jurassic proved to be a dino eat dino world, since carnivorous beasts arose to feast on the bounty. Each predator developed its own unique set of weapons and hunting techniques. Dilophosaurus, with its double head crest, possessed a devilish look matched by its sharp hand and feet claws. Cryolophosaurus, sometimes nicknamed Elvisaurus because of its Elvis-like pompadour-shaped head crest, ran after prey with its powerful legs. Gasosaurus, on the other hand, possessed such strong jaw muscles that it could bite into the thickest of flesh, tearing off hunks with near effortless head tosses. Perhaps one of the most aggressive predators, based on fossil remains of its victims, was Piatnitzkysaurus. The mangled prey bones suggest this 20-foot-long killer from Argentina could rip its victims to shreds with ease.</p>
+  
+  			</div>
+ 
+ 			<div id="panel4">
+				<p>The age of dinosaurs reached its apex during the Cretaceous period, which occurred 145 to 65 million years ago. Dinosaur and other animal diversity characterized this time, as more different types of dinosaurs emerged during the Cretaceous than in any other period. Nevertheless, ominous signs began to surface, hinting at the non-avian dinosaur downfall<span class="pq"> that would mark the end of this final phase of the Mesozoic era.</span></p>
+
+<h3>Cretaceous Geology, Climate and Plant Life</h3>
+
+	<p>Laurasia, a portion of the former Pangea supercontinent, consisted of the present-day continents of North America, Europe and much of Asia. Another section of former Pangea was referred to as Gondwana, which included Africa, Antarctica, Arabia, Australia, India and South America. Both Laurasia and Gondwana broke into pieces during the Cretaceous, leading to the separate continents. North America, however, was substantially different than it is today. A shallow sea split it in half, turning the western portion into an island.</p>
+
+	<p>Although wet and dry periods existed before this time, the seasons became more distinct during the Cretaceous. Flowering plants emerged, providing another food source for dinosaurs. The first flowers were mostly like small weeds but, like weeds today, they grew and spread well, quickly moving from tropical to cooler regions. Oak, maple, walnut and other trees also emerged.</p>
+
+	<h3>The Largest Flying Animals</h3>
+
+	<p>Cretaceous skies were full of creatures big and small. Minuscule moths and small bees shared airspace with enormous pterosaurs, which were warm-blooded flying reptiles related to dinosaurs. The pterosaur Pteranodon, which had a wingspan of up to 33 feet, was one of the biggest of the bunch. It spent much of its time soaring over water, looking for fish, crabs, insects and mollusks to eat.</p>
+
+	<h3>Dinosaur Diversity</h3>
+
+	<p>Big, small, spiked, fat and more, dinosaurs of all shapes and sizes appeared during the Cretaceous. Since the landmasses were now separated, animals on the distinct continents went their separate evolutionary ways. Beaked, plant-eating dinosaurs known as ceratopsians first appeared at this time. One of the most well-known members of this group was Triceratops, which had three facial horns and a large, bony frill. The so-called "bone-headed" dinosaurs also emerged during the Cretaceous. One of the biggest was Pachycephalosaurus, which had front teeth and might have even enjoyed meat with its plant-based diet.</p>
+
+	<p>Numerous carnivorous dinosaurs preyed upon the other dino bounty. There was Pelicanimimus, which had more teeth — around 220 — than any other known dinosaur. Afrovenator used its own bladelike teeth to tear at the flesh of prey. Carnotaurus had such short arms that its hands appeared to form out of its elbows, but its clawed feet and sharp teeth could still take down sauropods. Tyrannosaurus rex, however, stood out from the carnivorous dinosaur pack. This 40-foot-long beast was so strong that researchers believe it could shake victims to death, once it had sunk its teeth into their bodies.</p>
+
+	<h3>Hints of Extinction</h3>
+
+	<p>Not all dinosaurs thrived during the Cretaceous. Stegosaurs, which lacked the protective armor of other plant eaters, like ankylosaurs, went into a population decline. In northern areas, long-necked sauropods began to disappear. While minor, these changes might have foreshadowed the mass extinction that marked the end of both the Cretaceous period and the dinosaur age.</p>
+			</div>
+ 
+ 			<div id="panel5">
+ 				<p>During their 150 million years on the planet, dinosaurs evolved so many protective features, ranging from spiked tail clubs to helmet-like crests, that they seemed indestructible. Just 10 million years before the non-avian dinosaurs died out, dino populations as a whole were still thriving, with more different species than ever before colonizing the continents. But the Cretaceous-Tertiary extinction event, also known as the K-T extinction, put an end to the dinosaur era. <span class="pq">It’s still a great mystery why such an apparently abrupt mass extinction occurred 65 million years ago,</span> but a number of theories have been proposed.</p>
+
+<h3>Deadly Germs and Self-Destruction</h3>
+
+<p>Could dinosaurs have eaten each other to death? Experts in the past speculated that carnivores consumed so many herbivores that the latter went extinct,leading to the death of the meat eaters. Other scientists wondered if defective hormones and other degeneration weakened dinosaur populations. Yet another theory is that poisonous plants, or a deadly pandemic, caused great die-offs. Few of these hypotheses have been supported in recent years, however.</p>
+
+<h3>Volcanism</h3>
+
+<p>Volcanic activity remains a debated theory. It is known that at the end of the Cretaceous period multiple volcanoes erupted, particularly at what is now central India. These led to fiery lava flows that spewed noxious acid and carbon dioxide into the air. But would this air change have been enough to kill all the world’s dinosaurs? Although still unproven, it’s possible that a domino effect, leading to temperature increases, ozone layer reduction and lethal radiation, could have sent dinosaur populations into a nosedive over a relatively short period of time.</p>
+
+<h3>Asteroid Collision</h3>
+
+<p>One of the most widely researched theories holds that a large asteroid could have slammed into Earth. If big enough, such an asteroid could form a huge crater, sending dust and water into the atmosphere. If this didn’t choke out the dinosaurs, the resulting possible climate change could have done the dirty deed. Freezing cold weather would have followed such a crash, due to dust and moisture-forming clouds that would’ve been carried by strong winds. If this again didn’t kill the dinosaurs outright, it could have wiped out vegetation, starving plant-eating dinosaurs, a food source for carnivorous dinosaurs.</p>
+
+<p>Some research teams believe they have found evidence of such a destructive asteroid. A crater about 186 miles across was unearthed in Mexico. Fossils and damaged sand grains in North America may also suggest that flowering plants disappeared relatively quickly at the end of the Cretaceous. A rare, meteorite-associated element known as iridium additionally might have made an earthly impact, since a thin deposit of it was discovered in 1979. While other theories for the K-T event abound, such as deadly radiation emitted from an exploding star or a sudden reversal of Earth’s magnetic field, the asteroid collision theory appears to be the most widely accepted explanation for the non-avian dinosaur demise.</p>
+
+<h3>Dinosaurs in our Midst</h3>
+
+<p>There is little doubt that non-avian dinosaurs disappeared as the Cretaceous came to a close. But little winged, feathered "dinosaurs," that is to say theropods, may still be with us. Most paleontologists now believe that birds evolved from certain dinosaurs. If so, the over 10,000 species of birds could serve as living proof that the dinosaurs were, and may continue to be, the most successful creatures ever to inhabit the Earth.</p>
+ 			</div>
+
+
+   	      <div id="footer">
+    		<div id="linkList3">
+        	    <ul>
+            	    <li><a href="index.html"> Home </a></li>
+                	<li><a href="prehistory.html"> Prehistory </a></li>
+                    <li><a href="dinosaurs.html"> Dinosaurs </a></li>
+                    <li><a href="fossils.html"> Fossils </a></li>
+                    <li><a href="faq.html"> Faq </a></li>
+                    <li>
+                        <script type="text/javascript">
+                            var today = new Date();
+                            var message = dateString(today, 'Today is %W, %M %D, %Y');
+                            document.write(message);
+                        </script>
+                    </li>
+                    <li> <h5> Information from Discovery Dinosaur Central  </h5></li>  
+                </ul>
+			</div><!-- end of linkList3 -->
+    	  </div><!-- end of footer div -->
+	   </div><!-- end of mainContent -->
+	</div><!--end of container div -->
+</body>
+</html>

@@ -1,0 +1,354 @@
+@charset "UTF-8";
+/* CSS Document */
+
+/* 
+
+Dinosaurus CSS 
+by Jay Manalansan
+
+Primary Colors: 
+
+Green:#67753d
+Brown:#473f2d
+white: #ffffff
+bright green: #bfff00
+beige:#bfb78a;
+
+*/
+
+html {
+	background-color: #473f2d;
+}
+
+#container {
+	text-align: left;
+	width: 960px;
+	font-family: Century Gothic, Verdana, Geneva, sans-serif;
+	font-size:14px;
+	padding-left: 100px;
+	margin: 0 auto;
+	
+}
+
+ul, li, img, body, html {
+	margin: 0; padding: 0;
+}
+
+a {
+	text-decoration: none;
+	color: #fff;
+}
+
+/* beginning of header css */
+
+#header {
+	/*background:url(../images/backgroundimage.jpg) no-repeat;*/
+	margin-left: 0px;
+	overflow:hidden;
+	margin-top: 0px;
+	width: 960px;
+	height: 386px;
+	margin-bottom: 0px;
+}
+#logo {
+	padding-left: 30px;
+	padding-top: 15px;
+	margin: 0px;
+	border-style: none;
+}
+#logo a:link,a:visited,a:hover,a:active {
+	text-decoration:none;	
+}
+
+/* link styles */
+.dropdown a {
+	text-decoration: none;
+	display: block;
+	padding: 15px 4px 15px 17px;
+	color: #fff;
+	width: 6em;
+	font-family:Century Gothic, Verdana, Geneva, sans-serif;
+	font-weight: regular;
+	background-color: #67753d;
+  	margin: 0;
+}
+
+.dropdown li li a {
+  /* style for links on pop-up menus */
+
+}
+
+.dropdown li li li a {
+	/* style for second level menu links */
+}
+
+.dropdown a:hover{
+	background-color: #bfb78a;
+	color: #FFF;
+	border-bottom: 1px solid #CCC;
+	border-left: 1px solid #CCC;
+	border-top: 1px solid #CCC;
+	border-right: 1px solid #CCC;
+}
+
+/* main nav bar */
+.dropdown {
+	margin: 0;
+	margin-top: -268px;
+	padding-left: 21px;
+	line-height: 1;
+	
+	
+}
+
+/* all list items */
+.dropdown  li {
+	margin:0 !important;
+	padding:0 !important;
+	list-style: none; /* remove bullets */
+	float: left; /* place buttons side by side */
+  position: relative;
+}
+
+
+/* pop-up subnav */
+.dropdown ul {
+	margin: 0;
+	padding-top: 21px;
+	position: absolute;
+  left: 0;
+  top: 1.82em; /* change when you change height of links */
+	display: none;
+}
+
+
+/* list items in pop-up subnav */
+.dropdown ul li {
+	float: none; /* so links line up one above the other for drop-downs */
+}
+
+/*3rd level menu position*/
+.dropdown ul ul {
+	position: absolute;
+  left: 10.8em; /* change when you change width of links */
+  top: -1px;
+  z-index: 99;
+  border-top: 1px solid #FFF;
+	border-right: 1px solid #FFF;
+}
+
+.dropdown ul ul li {
+	z-index: 100;
+}
+
+
+
+
+/*
+#linkList {
+	background-image:url(../images/navbar.png);
+	background-repeat:repeat-x;
+	height:32px;
+	width: 1024px;
+	color:#fff;
+	font-size: 16px;
+	padding-top: 7px;
+	padding-right: 0px;
+	margin-top: -275px;
+	overflow:hidden;
+}
+
+#linkList li {
+	display:inline;
+	margin-left: 37px;
+	padding-right: 9px;
+	
+}*/
+
+
+#search {
+	padding-left: 660px;
+	padding-top: 11px;
+	margin-top: 0px;
+	background-image:url(../images/navbar.png);
+	background-repeat:no-repeat;
+	height: 39px;
+}
+
+/* end of header css */
+
+/* beginning of sideBar css */
+#sideBar {
+	clear:both;
+
+	font-family: Century Gothic, Verdana, Geneva, sans-serif;
+	font-size:12px;
+	color:#fff;
+	padding-left: 37px;
+	padding-top: 290px;
+	margin: 0px;
+	overflow:hidden;
+	float:left;
+	
+}
+
+#linkList2 ul {
+	list-style-type: none;
+}
+
+#linkList2 li {
+	padding-top: 10px;
+	margin: 0px;
+}
+
+
+/* end of sideBar css */
+
+
+/* beginning of body css*/
+
+#body  {
+	padding-left: 100px;
+	background-image:url(../images/boxhome.png);
+	background-repeat:no-repeat;
+	background-color:#67753d;
+	width: 960px;
+	height: 303px;
+	padding-left: 0px;
+	margin-left: 0px;
+	padding-top: 15px;
+	margin-top: 218px;
+	color:#fff;
+	
+	
+
+}
+#body p {
+	padding-top: 50px;
+	padding-left: 10px;
+	padding-right: 40px;
+}
+#home {
+	float:left;
+	padding-left: 3px;
+	margin-top: -15px;
+	
+}
+/* end of body css */
+
+/* beginning of footer css */
+
+#footer{
+	clear:both;	
+}
+#linkList3 {
+	background-image:url(../images/footerbar.png);
+	background-repeat:repeat-x;
+
+	height:32px;
+	color:#fff;
+	font-size: 11px;
+	padding-top: 8px;
+	padding-right: 0px;
+	padding-left: 0px;
+	margin-top: -5px;
+
+	width:960px;
+
+	overflow:hidden;
+}
+
+#linkList3 li {
+	
+	display:inline;
+	margin-left: -11px;
+	float: left;
+	padding-left: 50px;
+
+	
+}
+
+/* end of footer css*/
+
+/* beginning of photo div*/
+#photos { 
+	margin-top: -386px;
+	width: 1024px; 
+	height: 436px;
+	z-index: -3000;
+}
+#photos img { 
+	width: 1024px; 
+	height: 436px
+}
+	
+#controls {
+	text-align: center;
+	position:relative;
+	padding-top: 0px;
+	margin-top: -39px;
+	padding-left: 650px;
+	
+
+	color:#fff;
+	
+	
+}
+#pager    a, #main .control  {
+	font-size: 12px;
+	font-weight: bold;
+	color: #FFF;
+	background: #67753d;
+	padding: 2px 5px;
+	text-decoration: none;
+	margin-left: 5px;
+	cursor: pointer;
+	
+	
+}
+#pager a.activeSlide {
+	background-color: #bfb78a;
+	color: #000;
+}
+#pager a:hover, #playControl:hover {
+	background: #bfff00;
+}
+#prev #next #playControl {
+	background: #67753d;
+	color:#fff;
+}
+/* end of photo div */
+
+/* beginning of prehistory */
+
+/*beginning of header */
+
+#header1 {
+	z-index: -300;	
+	margin-top: -81px;
+}
+/*end of header*/
+
+#greet {
+	position: absolute;
+	padding-top: 33px;
+	margin-left: -40px;
+		
+}
+#randomFact {
+	position: relative;
+	margin-top: 100px;
+	margin-left: 300px;
+	width: 400pt;	
+}
+h5 {
+	position: absolute;
+	margin-top:-25px;
+	margin-left: 30px;	
+	width: 350px;
+}
+#vinny {
+	position: absolute;
+	margin-top: 95px;
+	margin-left: 270px;	
+}
